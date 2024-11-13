@@ -44,11 +44,11 @@ python qwen_doc_filter.py --model_path=/storage0/bi/models/Qwen2.5-14B-Instruct/
 
 Примеры
 ```
-python .\postprocessor.py --dir_path=filtered_docs/filtered_dir/
+python postprocessor.py --dir_path=filtered_docs/filtered_dir/
 ```
 файлы для постпроцессинга будут взяты из директории filtered_docs/filtered_dir/ и сохранены в директорию **postprocess_dir** (по умолчанию)
 
 ```
-python .\postprocessor.py --dir_path=filtered_docs/filtered_dir/ --inplace=True
+python postprocessor.py --dir_path=filtered_docs/filtered_dir/ --inplace=True
 ```
 файлы для постпроцессинга будут взяты из директории filtered_docs/ и будут заменены отредактированными (inplace=True).
