@@ -3,8 +3,8 @@
 
 ### Установка
 ```bash
-git clone https://github.com/myPar/LLM_doc_filter.git
-cd LLM_doc_filter
+git clone https://github.com/myPar/UrlContentExtractor
+cd UrlContentExtractor
 pip install -r requirements.txt
 ```
 Теперь можно использовать:
