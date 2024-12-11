@@ -8,8 +8,10 @@ import magic
 def postprocess_file(file_path: str, inplace: bool, output: str):
     def postprocess(data: str) -> str:
         data = re.sub(r"#+[ \t]*([^\n\r]+)[\r\n]+", r"\1\n", data)   # remove markdown header artifact and redundant new lines
-        data = re.sub(r"\*+(\w+)\*+", r"\1", data)
+        data = re.sub(r"\*+(\w+:?)\*+", r"\1", data)
+        data = re.sub(r"\*+([^*]+:?)\*+", r"\1", data)
         data = re.sub(r"_+(\w+)_+", r"\1", data)
+        data = re.sub(r"EMPTY", "", data)
         data = re.sub(r"(?<=[\n\r])---", "", data)
         data = re.sub(r"\n{2,}|(\r\n){2,}", "\n"*4, data)    # split on chunks
 
